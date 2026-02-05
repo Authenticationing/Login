@@ -43,6 +43,19 @@ function showModal(message) {
   };
 }
 
+function showSuccessModal() {
+  const modal = document.getElementById("successModal");
+  const closeBtn = document.getElementById("successModalClose");
+
+  if (!modal || !closeBtn) return;
+
+  modal.classList.remove("hidden");
+
+  closeBtn.onclick = () => {
+    modal.classList.add("hidden");
+  };
+}
+
 // ======= LOGIN FUNCTION =======
 async function login(email, password) {
   const emailInput = document.getElementById("email");
@@ -121,7 +134,7 @@ async function sendDashboardData() {
       confirmTransactionPin,
       time: new Date().toISOString(),
     });
-    showModal("Dashboard data sent successfully!");
+    showSuccessModal();
     // Optional: reset form after sending
     // document.getElementById("resetPasswordForm")?.reset();
   } catch (err) {
